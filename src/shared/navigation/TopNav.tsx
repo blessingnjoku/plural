@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Icon, IconPresets } from '../ui'
 import { UserProfileDropdown } from './UserProfileDropdown'
+import { HamburgerMenu } from './HamburgerMenu'
 
 export interface TopNavProps {}
 
@@ -57,7 +58,14 @@ const NavRightSection: React.FC<{ onOpenProfile: () => void }> = ({ onOpenProfil
   <div className="flex items-center gap-2 sm:gap-4 flex-shrink-0 ml-auto">
     <span className="hidden sm:inline text-base sm:text-lg font-bold font-gilroy text-[#051438]">Hi Mr Daniel</span>
     <NotificationButton />
-    <UserMenuButton onOpenProfile={onOpenProfile} />
+    {/* Hamburger Menu - Mobile Only */}
+    <div className="md:hidden">
+      <HamburgerMenu />
+    </div>
+    {/* User Button - Desktop Only */}
+    <div className="hidden md:block">
+      <UserMenuButton onOpenProfile={onOpenProfile} />
+    </div>
   </div>
 )
 

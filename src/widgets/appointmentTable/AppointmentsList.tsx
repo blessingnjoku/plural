@@ -23,7 +23,7 @@ export const AppointmentsList: React.FC<AppointmentsListProps> = ({
       <div className="overflow-x-auto scrollbar-hide md:overflow-x-visible">
         {/* Column Headers - Grid Layout (Hidden on Mobile) */}
         <div
-          className="hidden md:grid items-center mb-1 text-xs md:text-sm lg:text-base font-bold text-[#A6AFC2] font-gilroy sticky top-0 z-[99] bg-[#EDF0F8] py-2 px-0 appointment-header-grid"
+          className="hidden lg:grid items-center mb-1 text-xs md:text-sm lg:text-base font-bold text-[#A6AFC2] font-gilroy sticky top-0 z-[99] bg-[#EDF0F8] py-2 px-0 appointment-header-grid"
         >
           {/* Left Accent Bar Space */}
           <div className="absolute left-0 top-0 bottom-0 w-[6px]" />

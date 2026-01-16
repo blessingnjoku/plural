@@ -104,16 +104,11 @@ export const DashboardHeader: React.FC<DashboardHeaderProps> = ({
         </Button>
       </div>
 
-      {/* Mobile Menu */}
-      <div className="md:hidden flex justify-end">
-        <HamburgerMenu />
-      </div>
-
       {/* Bottom Row: Appointments Title + Filters | Pagination */}
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 md:gap-6 pt-6 pb-[8px]">
         <div className="flex flex-col md:flex-row items-start md:items-center gap-3 md:gap-[62px] w-full md:w-auto">
-          {/* Title - Hidden on Mobile */}
-          <h1 className="hidden md:block text-lg lg:text-heading-2 font-bold text-[#051438]">
+          
+          <h1 className="text-sm md:text-lg lg:text-heading-2 font-bold text-[#051438]">
             Appointments
           </h1>
 
