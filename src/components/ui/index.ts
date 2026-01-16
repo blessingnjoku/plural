@@ -1,5 +1,0 @@
-export { Button, type ButtonProps } from './Button'
-export { Input, Select, SearchInput, type InputProps, type SelectProps } from './Input'
-export { Icon, IconPresets, type IconName, type IconProps } from './Icon'
-export { Modal, type ModalProps } from './Modal'
-export { BaseModal, type BaseModalProps } from './BaseModal'
