@@ -1,16 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Layout, useLayout, DashboardHeader } from './components'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  return (
+    <Layout>
+      <AppointmentsDashboard />
+    </Layout>
+  )
+}
+
+const AppointmentsDashboard = () => {
+  const { setActiveModal, setSelectedPatient } = useLayout()
+
+  const handleAddPatient = () => {
+    setSelectedPatient(null)
+    setActiveModal('addPatient')
+  }
+
+  const handleCreateAppointment = () => {
+    setActiveModal('addAppointment')
+  }
+
+  const handleSearch = (query: string) => {
+    console.log('Search:', query)
+    // TODO: Implement search
+  }
 
   return (
-    <>
-      <h1>Welcome to Plural</h1>
-       
-    </>
+    <div className="space-y-8">
+      <DashboardHeader
+        onAddPatient={handleAddPatient}
+        onCreateAppointment={handleCreateAppointment}
+        onSearch={handleSearch}
+      />
+
+  
+    </div>
   )
 }
 
