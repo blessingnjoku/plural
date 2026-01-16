@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { Button, Icon, IconPresets, SearchInput } from '../../shared/ui'
-import { HamburgerMenu } from '../../shared/navigation'
 import { SortModal, type SortOption, ClinicFilterModal, type ClinicType } from '../../shared/components'
 
 export interface DashboardHeaderProps {
