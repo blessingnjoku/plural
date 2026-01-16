@@ -31,3 +31,16 @@ a {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+/* Appointment Table Grid Layout */
+.appointment-card-grid {
+  display: grid;
+  grid-template-columns: 78px 407px 214px 181px 189px 1fr;
+  gap: 0;
+}
+
+.appointment-header-grid {
+  display: grid;
+  grid-template-columns: 78px 407px 214px 181px 189px 1fr;
+  gap: 0;
+}
