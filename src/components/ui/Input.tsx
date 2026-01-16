@@ -1,9 +1,17 @@
 import React from 'react'
+import { Icon } from './Icon'
 
-interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string
   error?: string
   helperText?: string
+}
+
+export interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
+  label?: string
+  error?: string
+  helperText?: string
+  options: Array<{ value: string | number; label: string }>
 }
 
 export const Input: React.FC<InputProps> = ({
@@ -31,13 +39,6 @@ export const Input: React.FC<InputProps> = ({
       )}
     </div>
   )
-}
-
-interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
-  label?: string
-  error?: string
-  helperText?: string
-  options: Array<{ value: string | number; label: string }>
 }
 
 export const Select: React.FC<SelectProps> = ({
@@ -93,20 +94,44 @@ export const SearchInput: React.FC<SearchInputProps> = ({
   }
 
   return (
-    <div className="w-full">
-      {label && (
-        <label className="block text-label text-neutral-900 mb-2 font-medium">
-          {label}
-        </label>
-      )}
-      <div className="relative">
-        <input
-          type="text"
-          className={`w-full h-10 px-3 py-2 text-body-md border-2 rounded-component bg-neutral-0 border-neutral-100 text-neutral-900 placeholder-neutral-400 transition-colors focus:outline-none focus:border-primary-700 focus:ring-2 focus:ring-primary-100 ${className}`}
-          onChange={handleChange}
-          {...props}
-        />
+    <div className="flex items-center justify-center w-full">
+      <div className="w-full max-w-[600px]">
+        {label && (
+          <label className="block text-label text-neutral-900 mb-2 font-medium">
+            {label}
+          </label>
+        )}
+        <div className="relative flex items-center h-10 border border-[#DFE2E9] rounded-[10px] bg-white px-6 py-1.5 gap-2.5">
+          {/* Search Icon */}
+          <Icon
+            name="search"
+            size={20}
+            className="flex-shrink-0 text-neutral-600"
+          />
+
+          {/* Input */}
+          <input
+            type="text"
+            className={`flex-1 text-body-md bg-white text-neutral-900 placeholder-neutral-400 transition-colors focus:outline-none ${className}`}
+            onChange={handleChange}
+            {...props}
+          />
+
+          {/* Fingerprint Icon */}
+          <Icon
+            name="fingerprint"
+            size={20}
+            className="flex-shrink-0 text-neutral-600"
+          />
+
+          {/* Filter Icon */}
+          <Icon
+            name="filter"
+            size={20}
+            className="flex-shrink-0 text-neutral-600 cursor-pointer hover:text-neutral-900"
+          />
+        </div>
       </div>
     </div>
-  )
+  );
 }

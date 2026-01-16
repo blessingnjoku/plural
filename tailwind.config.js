@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        gilroy: ['Gilroy', 'system-ui', 'sans-serif'],
+      },
       colors: {
         primary: {
           50: '#F0F1FF',
@@ -15,6 +18,8 @@ export default {
           800: '#080961',
           900: '#050649',
         },
+        'text-dark': '#051438',
+        'text-secondary': '#677597',
         neutral: {
           0: '#FFFFFF',
           50: '#F8F9FA',

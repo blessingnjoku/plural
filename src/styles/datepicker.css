@@ -1,0 +1,139 @@
+/* React DatePicker Custom Styles */
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker__input-container {
+  position: relative;
+  width: 100%;
+}
+
+/* Inline calendar styling */
+.react-datepicker {
+  background-color: #677597;
+  color: white;
+  border: none;
+  border-radius: 0;
+  width: 100%;
+  margin-top: 0 !important;
+  position: relative !important;
+  padding: 16px 24px;
+}
+
+.react-datepicker__month-container {
+  float: none;
+  width: 100%;
+  padding: 0;
+}
+
+.react-datepicker__header {
+  background-color: transparent;
+  border-bottom: none;
+  border-radius: 0;
+  padding: 0 0 16px 0;
+}
+
+.react-datepicker__day-names {
+  padding: 0 0 8px 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.react-datepicker__day-name {
+  color: #051438;
+  width: 30px;
+  line-height: 30px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: semibold;
+  text-align: center;
+  font-variant: small-caps;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  display: inline-block;
+}
+
+.react-datepicker__week {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1px 0;
+}
+
+.react-datepicker__day {
+  color: white;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  margin: 0;
+  border-radius: 19px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.react-datepicker__day:hover {
+  background-color: #7a90c2;
+  color: white;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background-color: #7a90c2;
+  color: white;
+}
+
+.react-datepicker__day--today {
+  font-weight: bold;
+  background-color: #7a90c2;
+  color: white;
+}
+
+.react-datepicker__navigation {
+  line-height: 1.7rem;
+  text-align: center;
+  cursor: pointer;
+  color: #CDD8F3;
+  top: 16px;
+}
+
+.react-datepicker__navigation:hover {
+  opacity: 0.75;
+}
+
+.react-datepicker__navigation-icon::before {
+  border-color: #CDD8F3;
+}
+
+.react-datepicker__current-month {
+  color: #CDD8F3;
+  font-size: 16px;
+  font-weight: semibold;
+  margin: 0;
+}
+
+/* Dropdown positioning */
+.react-datepicker-popper {
+  z-index: 9999 !important;
+  transform: translate3d(0, 0, 0) !important;
+  will-change: transform;
+  position: absolute !important;
+  top: 100% !important;
+}
+
+/* Ensure the calendar appears above modal content */
+.modal-content .react-datepicker__popper {
+  z-index: 9999 !important;
+}
+
+/* Fix positioning for left-aligned calendars */
+.react-datepicker__popper[data-placement^='bottom'] {
+  transform: translate3d(0, 0, 0) !important;
+}
+
+.react-datepicker__navigation--next {
+    right: 24px;
+}
+.react-datepicker__navigation--previous {
+    left: 25px;
+}

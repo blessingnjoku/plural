@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Gilroy:wght@600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,10 +13,21 @@ html {
 }
 
 body {
-  @apply bg-neutral-0 text-neutral-900 font-sans;
-  font-family: system-ui, -apple-system, sans-serif;
+  @apply bg-neutral-0 text-neutral-900;
+  font-family: 'Gilroy', system-ui, -apple-system, sans-serif;
+  background-color:#EDF0F8
 }
 
 a {
   @apply text-primary-700 hover:text-primary-800 transition-colors;
+}
+
+/* Hide scrollbar while keeping functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }

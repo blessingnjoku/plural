@@ -39,6 +39,7 @@ export const mockPatients: Patient[] = [
     age: 21,
     gender: 'Male',
     dateOfBirth: '2004-01-15',
+    profileImage: new URL('../assets/images/img1.png', import.meta.url).href,
   },
   {
     id: 'HOSP8765432',
@@ -47,6 +48,7 @@ export const mockPatients: Patient[] = [
     age: 30,
     gender: 'Female',
     dateOfBirth: '1995-06-22',
+    profileImage: new URL('../assets/images/img2.png', import.meta.url).href,
   },
   {
     id: 'HOSP7634892',
@@ -55,6 +57,7 @@ export const mockPatients: Patient[] = [
     age: 23,
     gender: 'Female',
     dateOfBirth: '2002-10-05',
+    profileImage: new URL('../assets/images/img4.png', import.meta.url).href,
   },
   {
     id: 'HOSP9876543',
@@ -63,6 +66,7 @@ export const mockPatients: Patient[] = [
     age: 11,
     gender: 'Female',
     dateOfBirth: '2014-08-30',
+    profileImage: new URL('../assets/images/img5.png', import.meta.url).href,
   },
   {
     id: 'HOSP2345678',
@@ -119,6 +123,7 @@ export const mockAppointments: Appointment[] = [
     walletBalance: 230500,
     dateTime: '2025-09-22T17:30',
     status: 'Not arrived',
+    isNew: true,
   },
   {
     id: 'APT003',
@@ -129,6 +134,7 @@ export const mockAppointments: Appointment[] = [
     walletBalance: 90000,
     dateTime: '2025-09-22T15:45',
     status: 'Awaiting vitals',
+    isNew: true,
   },
   {
     id: 'APT004',
@@ -179,5 +185,53 @@ export const mockAppointments: Appointment[] = [
     walletBalance: 210000,
     dateTime: '2025-09-22T08:00',
     status: 'Seen doctor',
+  },
+]
+
+export const mockAppointmentModalPatients: Patient[] = [
+  {
+    id: 'PLAT-S/009089',
+    firstName: 'Aikpopoidon',
+    lastName: 'Endurance',
+    age: 21,
+    gender: 'Male',
+    dateOfBirth: '2004-01-15',
+    profileImage: new URL('../assets/images/img1.png', import.meta.url).href,
+  },
+  {
+    id: 'PLAT-S/0124789',
+    firstName: 'Aikpopoidon',
+    lastName: 'Feranmi',
+    age: 30,
+    gender: 'Female',
+    dateOfBirth: '1995-06-22',
+    profileImage: new URL('../assets/images/img2.png', import.meta.url).href,
+  },
+  {
+    id: 'PLAT-S/0035689',
+    firstName: 'Aikpopoidon',
+    lastName: 'Selena',
+    age: 23,
+    gender: 'Female',
+    dateOfBirth: '2002-10-05',
+    profileImage: new URL('../assets/images/img4.png', import.meta.url).href,
+  },
+  {
+    id: 'PLAT-S/215636',
+    firstName: 'Aikpopoidon',
+    lastName: 'Tolani',
+    age: 11,
+    gender: 'Female',
+    dateOfBirth: '2014-08-30',
+    profileImage: new URL('../assets/images/img5.png', import.meta.url).href,
+  },
+  {
+    id: 'PLAT-S/0156234',
+    firstName: 'Chinedu',
+    lastName: 'Okafor',
+    age: 28,
+    gender: 'Male',
+    dateOfBirth: '1997-04-12',
+    profileImage: new URL('../assets/images/img1.png', import.meta.url).href,
   },
 ]

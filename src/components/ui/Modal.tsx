@@ -1,6 +1,6 @@
 import React from 'react'
 
-interface ModalProps {
+export interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   title?: string;

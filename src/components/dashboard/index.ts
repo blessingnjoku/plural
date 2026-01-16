@@ -1,0 +1,5 @@
+export { DashboardHeader, type DashboardHeaderProps } from './DashboardHeader'
+export { StatusBadge, type StatusBadgeProps } from './StatusBadge'
+export { AppointmentCard, type AppointmentCardProps } from './AppointmentCard'
+export { AppointmentsList, type AppointmentsListProps } from './AppointmentsList'
+export { AppointmentsTable, type AppointmentsTableProps } from './AppointmentsTable'

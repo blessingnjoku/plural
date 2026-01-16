@@ -1,9 +1,34 @@
-export { Button } from './Button'
-export { Input, Select, SearchInput } from './Input'
-export { Modal } from './Modal'
-export { Layout, useLayout, LayoutContext } from './Layout'
-export { TopNav } from './TopNav'
-export { Icon, IconPresets } from './Icon'
-export type { IconName } from './Icon'
-export { StatusPill } from './StatusPill'
-export { DashboardHeader } from './DashboardHeader'
+//  Foundational UI Components
+export { Button, type ButtonProps } from './ui'
+export { Input, Select, SearchInput, type InputProps, type SelectProps } from './ui'
+export { Icon, IconPresets, type IconName, type IconProps } from './ui'
+export { Modal, BaseModal, type BaseModalProps, type ModalProps } from './ui'
+
+//  Shared/Reusable Components
+export { SortModal, type SortOption } from './shared'
+export { ClinicFilterModal, type ClinicType } from './shared'
+export { PatientSearchDropdown } from './shared'
+
+//  Navigation Components
+export { TopNav, type TopNavProps } from './navigation'
+export { HamburgerMenu, type HamburgerMenuProps } from './navigation'
+export { UserProfileDropdown, type UserProfileDropdownProps } from './navigation'
+
+//  Dashboard Components
+export { DashboardHeader, type DashboardHeaderProps } from './dashboard'
+export { StatusBadge, type StatusBadgeProps } from './dashboard'
+export { AppointmentCard, type AppointmentCardProps } from './dashboard'
+export { AppointmentsList, type AppointmentsListProps } from './dashboard'
+export { AppointmentsTable, type AppointmentsTableProps } from './dashboard'
+
+//  Modal Components
+export { AddPatientModal, type AddPatientModalProps } from './modals'
+export { AddAppointmentModal, type AddAppointmentModalProps } from './modals'
+export { ClinicSelectionDropdown, type ClinicSelectionDropdownProps } from './modals'
+export { AppointmentTypeDropdown, type AppointmentTypeDropdownProps } from './modals'
+
+//  Layout Component
+export { Layout, type LayoutProps } from './layout'
+
+// Context & Hooks
+export { useLayout } from '../context/useLayout'
